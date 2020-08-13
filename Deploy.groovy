@@ -19,6 +19,12 @@ pipeline {
                
                 }
                 }
+
+                stage('Wait for User I/p') {
+                    steps {
+                        input message: 'Proceed further ?', ok: 'Yes'
+                    }
+                }
                 
             
 
