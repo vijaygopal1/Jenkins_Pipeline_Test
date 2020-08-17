@@ -28,7 +28,7 @@ pipeline {
 
                 stage('Send email') {
                     steps {
-                        emailext attachLog: true, body: 'Test', postsendScript: 'Test', recipientProviders: [developers()], replyTo: 'gopalank59@gmail.com', subject: 'Jenkins ', to: 'gopalank59@gmail.com'
+                        emailext attachLog: true, body: 'Test', postsendScript: 'Test', recipientProviders: [developers()], replyTo: '@wilp.bits-pilani.ac.in', subject: 'Jenkins ', to: '2013hz15516@wilp.bits-pilani.ac.in'
                     }
                 }
                 
