@@ -25,6 +25,12 @@ pipeline {
                         input message: 'Proceed further ?', ok: 'Yes'
                     }
                 }
+
+                stage('Send email') {
+                    steps {
+                        emailext attachLog: true, body: 'Test', postsendScript: 'Test', recipientProviders: [developers()], replyTo: 'gopalank59@gmail.com', subject: 'Jenkins ', to: 'gopalank59@gmail.com'
+                    }
+                }
                 
             
 
